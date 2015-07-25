@@ -5,9 +5,9 @@ import android.os.Handler;
 import com.patryk.mvpdagger2.base.BaseView;
 import com.patryk.mvpdagger2.network.TwitterAPI;
 import com.patryk.mvpdagger2.ui.presenterinterfaces.MainActivityPresenter;
-import com.patryk.mvpdagger2.ui.viewinterfaces.MainActivityView;
+        import com.patryk.mvpdagger2.ui.viewinterfaces.MainActivityView;
 
-import javax.inject.Inject;
+        import javax.inject.Inject;
 
 /**
  * Created by Patryk on 7/23/2015.
