@@ -1,6 +1,8 @@
 package com.patryk.mvpdagger2.ui;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -9,6 +11,7 @@ import android.widget.TextView;
 
 import com.patryk.mvpdagger2.MVPApp;
 import com.patryk.mvpdagger2.R;
+import com.patryk.mvpdagger2.SomeActivity;
 import com.patryk.mvpdagger2.base.BasePresenterActivity;
 import com.patryk.mvpdagger2.dagger.BaseComponent;
 import com.patryk.mvpdagger2.dagger.DaggerBaseComponent;
@@ -46,6 +49,12 @@ public class MainActivity extends BasePresenterActivity<MainActivityPresenter> i
             @Override
             public void onClick(View view) {
                 getPresenter().getRandomTweet();
+                new Handler().postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        startActivity(new Intent(MainActivity.this, SomeActivity.class));
+                    }
+                }, 2000);
             }
         });
     }
